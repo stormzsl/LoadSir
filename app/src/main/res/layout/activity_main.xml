@@ -103,6 +103,33 @@
             android:text="@string/best_practices"
             android:textAllCaps="false"/>
 
+        <Button
+            android:background="#d77213"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MMkvSave"
+            android:text="MMkvSave"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:background="#d77213"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MMkvRead"
+            android:text="MMkvRead"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:background="#d77213"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MMkvDelete"
+            android:text="MMkvDelete"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"/>
+
 
     </LinearLayout>
 </ScrollView>

@@ -1,15 +1,16 @@
 package sample.kingja.loadsir;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.kingja.loadsir.core.LoadSir;
 import com.squareup.leakcanary.LeakCanary;
-
 import sample.kingja.loadsir.callback.CustomCallback;
 import sample.kingja.loadsir.callback.EmptyCallback;
 import sample.kingja.loadsir.callback.ErrorCallback;
 import sample.kingja.loadsir.callback.LoadingCallback;
 import sample.kingja.loadsir.callback.TimeoutCallback;
+import sample.kingja.loadsir.utils.KVUtilsJava;
 
 /**
  * Description:TODO
@@ -22,6 +23,8 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        String rootDir = KVUtilsJava.init(this);
+        Log.e("stormzsl","rootDir="+rootDir);
         if (setupLeakCanary()) {
             return;
         }
