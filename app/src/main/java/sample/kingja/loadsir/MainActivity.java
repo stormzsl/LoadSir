@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import sample.kingja.loadsir.calendar.CalendarActivity;
 import sample.kingja.loadsir.target.AnimateActivity;
 import sample.kingja.loadsir.target.BestPracticesActivity;
 import sample.kingja.loadsir.target.ConstraintLayoutActivity;
@@ -127,5 +128,12 @@ public class MainActivity extends AppCompatActivity {
        String value= getSharedPreferences(spName,MODE_PRIVATE).getString(LOGIN_KEY,"null");
         long end=System.currentTimeMillis();
         Log.e("stormzsl SPSRead cost",(end-start)+" ms " +value);
+    }
+
+
+    //打开日历
+    public void openCalendar(View view){
+        Intent intent=new Intent(this, CalendarActivity.class);
+        startActivity(intent);
     }
 }

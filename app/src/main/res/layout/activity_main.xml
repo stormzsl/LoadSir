@@ -148,6 +148,14 @@
             android:layout_marginTop="10dp"
             android:textAllCaps="false"/>
 
+        <Button
+            android:background="#d77213"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openCalendar"
+            android:text="openCalendar"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
 </ScrollView>
