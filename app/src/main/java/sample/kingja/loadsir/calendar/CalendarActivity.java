@@ -33,10 +33,20 @@ public class CalendarActivity extends AppCompatActivity {
 //        intent.setComponent(new ComponentName("com.android.calendar",
 //                "com.android.calendar.LaunchActivity"));
 //        startActivity(intent);
-
         //2.跳转日历添加事件界面,可以添加定时功能
-        Intent intent = new Intent(Intent.ACTION_INSERT);
-        intent.setData(CalendarContract.Events.CONTENT_URI);
+//        Intent intent = new Intent(Intent.ACTION_INSERT);
+//        intent.setData(CalendarContract.Events.CONTENT_URI);
+//        startActivity(intent);
+
+        long morningStartTimeMiles =System.currentTimeMillis();
+        long endStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
+
+
+        CalendarReminderUtils.addCalendarEvent(this,"早上","满满的一天开启正能量",morningStartTimeMiles,1);
+        CalendarReminderUtils.addCalendarEvent(this,"晚上","晚上了要加油",endStartTimeMiles,1);
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName("com.android.calendar",
+                "com.android.calendar.LaunchActivity"));
         startActivity(intent);
     }
 
