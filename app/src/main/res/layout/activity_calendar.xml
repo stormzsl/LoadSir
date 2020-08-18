@@ -32,9 +32,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tv_show"
+    <Button
+        android:id="@+id/openWeekActivity"
         android:textColor="@color/red"
+        android:text="openWeekActivity"
+        android:onClick="openWeekActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
