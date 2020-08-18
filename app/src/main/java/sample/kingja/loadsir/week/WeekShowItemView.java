@@ -1,8 +1,7 @@
 package sample.kingja.loadsir.week;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -26,6 +25,8 @@ public class WeekShowItemView extends LinearLayout implements View.OnClickListen
     private TextView mSubTitleTv;
 
     private Context mContext;
+
+    private WeekViewModel mWeekViewModel;
 
     public WeekShowItemView(Context context) {
         super(context);
@@ -57,28 +58,25 @@ public class WeekShowItemView extends LinearLayout implements View.OnClickListen
         setOnClickListener(this::onClick);
     }
 
-    public void setData(String title, String subTitle) {
+    public void setData(String title, String subTitle,WeekViewModel weekViewModel) {
         mTitleTv.setText(title);
         mSubTitleTv.setText(subTitle);
+        mWeekViewModel=weekViewModel;
     }
 
     @Override
     public void onClick(View v) {
         Log.e("stormzsl", "aaa");
-        if(mContext instanceof WeekShowActivity){
-            ((WeekShowActivity) mContext).updateWeekShowBackGround(this);
+        mWeekViewModel.changeWeekItemBackground.setValue(this);
+    }
+
+    public void setSelected(boolean selected){
+        if(selected){
+            Drawable drawable=getResources().getDrawable(R.drawable.week_shape);
+            setBackground(drawable);
+        }else {
+            setBackground(null);
         }
-    }
 
-    public void clearBackgroundDrawable(){
-        setBackground(null);
-    }
-
-    public void setBackgroundShape(){
-        GradientDrawable drawable = new GradientDrawable();
-        drawable.setCornerRadius(5);
-        drawable.setStroke(1, Color.parseColor("#cccccc"));
-        drawable.setColor(Color.parseColor("#eeeeee"));
-        setBackground(drawable);
     }
 }
