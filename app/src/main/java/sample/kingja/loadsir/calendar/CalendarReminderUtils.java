@@ -22,10 +22,10 @@ public class CalendarReminderUtils {
         private static String CALENDER_EVENT_URL = "content://com.android.calendar/events";
         private static String CALENDER_REMINDER_URL = "content://com.android.calendar/reminders";
 
-        private static String CALENDARS_NAME = "boohee";
-        private static String CALENDARS_ACCOUNT_NAME = "BOOHEE@boohee.com";
-        private static String CALENDARS_ACCOUNT_TYPE = "com.android.boohee";
-        private static String CALENDARS_DISPLAY_NAME = "BOOHEE账户";
+        private static String CALENDARS_NAME = "diditest";
+        private static String CALENDARS_ACCOUNT_NAME = "diditest@global.com";
+        private static String CALENDARS_ACCOUNT_TYPE = "com.android.diditest";
+        private static String CALENDARS_DISPLAY_NAME = "didi global accounttest";
 
         /**
          * 检查是否已经添加了日历账户，如果没有添加先添加一个日历账户再查询
@@ -113,8 +113,12 @@ public class CalendarReminderUtils {
             //添加日历事件
             Calendar mCalendar = Calendar.getInstance();
             mCalendar.setTimeInMillis(reminderTime);//设置开始时间
+
+//            mCalendar.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
+
             long start = mCalendar.getTime().getTime();
             mCalendar.setTimeInMillis(start + 10 * 60 * 1000);//设置终止时间，开始时间加10分钟
+
             long end = mCalendar.getTime().getTime();
             ContentValues event = new ContentValues();
             event.put("title", title);
@@ -124,6 +128,7 @@ public class CalendarReminderUtils {
             event.put(CalendarContract.Events.DTEND, end);
             event.put(CalendarContract.Events.HAS_ALARM, 1);//设置有闹钟提醒
             event.put(CalendarContract.Events.EVENT_TIMEZONE, "Asia/Shanghai");//这个是时区，必须有
+
             Uri newEvent = context.getContentResolver().insert(Uri.parse(CALENDER_EVENT_URL), event); //添加事件
             if (newEvent == null) { //添加日历事件失败直接返回
                 return;

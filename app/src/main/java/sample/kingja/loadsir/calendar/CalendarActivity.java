@@ -37,17 +37,32 @@ public class CalendarActivity extends AppCompatActivity {
 //        Intent intent = new Intent(Intent.ACTION_INSERT);
 //        intent.setData(CalendarContract.Events.CONTENT_URI);
 //        startActivity(intent);
+//        try {
+//            long morningStartTimeMiles =System.currentTimeMillis()+(24*60*60*1000);
+//            long endStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
+//
+//            CalendarReminderUtils.addCalendarEvent(this,"早上test","满满的一天开启正能量",morningStartTimeMiles,1);
+//            CalendarReminderUtils.addCalendarEvent(this,"晚上test","晚上了要加油",endStartTimeMiles,1);
+//            Intent intent = new Intent();
+//            intent.setComponent(new ComponentName("com.android.calendar",
+//                    "com.android.calendar.LaunchActivity"));
+//            startActivity(intent);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
 
-        long morningStartTimeMiles =System.currentTimeMillis();
-        long endStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
+        long morningStartTimeMiles =System.currentTimeMillis()+(60*1000);
+            long endStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
+//        CalendarProviderManager.startCalendarForIntentToInsert(this,morningStartTimeMiles,endStartTimeMiles,"this is title","this is desc","北京西北旺",false);
 
+        CalendarEvent calendarEvent=new CalendarEvent("this is title","this is desc","北京钻石大厦滴滴大厦",morningStartTimeMiles,endStartTimeMiles,AdvanceTime.FIVE_MINUTES,RRuleConstant.REPEAT_CYCLE_DAILY_FOREVER);
+        CalendarProviderManager.addCalendarEvent(this,calendarEvent);
 
-        CalendarReminderUtils.addCalendarEvent(this,"早上","满满的一天开启正能量",morningStartTimeMiles,1);
-        CalendarReminderUtils.addCalendarEvent(this,"晚上","晚上了要加油",endStartTimeMiles,1);
-        Intent intent = new Intent();
-        intent.setComponent(new ComponentName("com.android.calendar",
-                "com.android.calendar.LaunchActivity"));
-        startActivity(intent);
+//        Intent intent = new Intent();
+//            intent.setComponent(new ComponentName("com.android.calendar",
+//                    "com.android.calendar.LaunchActivity"));
+//            startActivity(intent);
+
     }
 
     public void openWeekActivity(View view){
