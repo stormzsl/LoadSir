@@ -1,6 +1,7 @@
 package sample.kingja.loadsir.week;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -32,6 +33,7 @@ public class WeekShowActivity extends AppCompatActivity {
             @Override
             public void onChanged(WeekShowItemView acceptItemView) {
                 if(acceptItemView!=null){
+                    Log.e("stormzsl","onChanged");
                     updateWeekShowBackGround(acceptItemView);
                 }
             }

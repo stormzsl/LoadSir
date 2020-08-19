@@ -66,8 +66,10 @@ public class WeekShowItemView extends LinearLayout implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        Log.e("stormzsl", "aaa");
-        mWeekViewModel.changeWeekItemBackground.setValue(this);
+        if (mWeekViewModel.changeWeekItemBackground.getValue()!=this){
+            Log.e("stormzsl","onClick");
+            mWeekViewModel.changeWeekItemBackground.setValue(this);
+        }
     }
 
     public void setSelected(boolean selected){
