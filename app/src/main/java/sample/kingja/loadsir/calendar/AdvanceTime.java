@@ -9,6 +9,10 @@ package sample.kingja.loadsir.calendar;
 public class AdvanceTime {
 
     /**
+     * 0分钟前
+     */
+    public static final int ZERO_MINUTES = 0;
+    /**
      * 5分钟前
      */
     public static final int FIVE_MINUTES = 5;
