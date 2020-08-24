@@ -20,6 +20,8 @@ public class WeekShowActivity extends AppCompatActivity {
 
     private final static int COUNT = 10;
 
+    private LinearLayout mContentContainer;
+
     private LinearLayout mWeekContainer;
 
     private WeekViewModel weekViewModel;
@@ -28,6 +30,9 @@ public class WeekShowActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.week_show_activity);
+
+        mContentContainer=findViewById(R.id.container_layout);
+
         weekViewModel=new ViewModelProvider(this).get(WeekViewModel.class);
         weekViewModel.changeWeekItemBackground.observe(this, new Observer<WeekShowItemView>() {
             @Override
