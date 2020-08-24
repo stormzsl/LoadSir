@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import sample.kingja.loadsir.R;
+import sample.kingja.loadsir.utils.DensityUtils;
 
 /**
  * 作者:created by storm
@@ -48,9 +49,12 @@ public class WeekShowActivity extends AppCompatActivity {
             WeekShowItemView itemView = new WeekShowItemView(this);
             mWeekContainer.addView(itemView);
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) itemView.getLayoutParams();
-            params.rightMargin = 70;
+            params.rightMargin = DensityUtils.dp2px(this,19f);
             params.gravity = Gravity.CENTER;
-            itemView.setData("日期", "星期" + index,weekViewModel);
+            itemView.setData("日期", ""+index,weekViewModel);
+            if(index==0){
+                itemView.setTodayColorStyle();
+            }
         }
 
 
