@@ -7,7 +7,8 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import sample.kingja.loadsir.R
-import sample.kingja.loadsir.utils.KVUtilsJava
+import sample.kingja.loadsir.utils.KVUtils
+import sample.kingja.loadsir.utils.KVUtils.LOGIN_NAME_KEY
 
 /**
  * 作者:created by storm
@@ -22,7 +23,7 @@ class MMKVActivity : Activity() {
 
     fun MMkvSave(view: View?) {
         val start = System.currentTimeMillis()
-        KVUtilsJava.put(KVUtilsJava.LOGIN_NAME_KEY, "stormzsl")
+        KVUtils.put(LOGIN_NAME_KEY, "stormzsl")
         Toast.makeText(this, "保存成功", Toast.LENGTH_SHORT).show()
         val end = System.currentTimeMillis()
         Log.e("stormzsl MMkvSave cost", (end - start).toString() + " ms")
@@ -30,14 +31,14 @@ class MMKVActivity : Activity() {
 
     fun MMkvRead(view: View?) {
         val start = System.currentTimeMillis()
-        val value = KVUtilsJava.getString(KVUtilsJava.LOGIN_NAME_KEY, "null")
+        val value = KVUtils.getString(LOGIN_NAME_KEY, "null")
         Toast.makeText(this, "获取值:$value", Toast.LENGTH_SHORT).show()
         val end = System.currentTimeMillis()
         Log.e("stormzsl MMkvRead cost", (end - start).toString() + " ms")
     }
 
     fun MMkvDelete(view: View?) {
-        KVUtilsJava.remove(KVUtilsJava.LOGIN_NAME_KEY)
+        KVUtils.remove(LOGIN_NAME_KEY)
         Toast.makeText(this, "删除成功", Toast.LENGTH_SHORT).show()
     }
 
