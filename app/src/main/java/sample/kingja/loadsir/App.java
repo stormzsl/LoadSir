@@ -10,7 +10,7 @@ import sample.kingja.loadsir.callback.EmptyCallback;
 import sample.kingja.loadsir.callback.ErrorCallback;
 import sample.kingja.loadsir.callback.LoadingCallback;
 import sample.kingja.loadsir.callback.TimeoutCallback;
-import sample.kingja.loadsir.utils.KVUtilsKt;
+import sample.kingja.loadsir.utils.KVUtils;
 
 /**
  * Description:TODO
@@ -23,7 +23,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        String rootDir = KVUtilsKt.init(this);
+        String rootDir = KVUtils.INSTANCE.init(this);
         Log.e("stormzsl","rootDir="+rootDir);
         if (setupLeakCanary()) {
             return;
