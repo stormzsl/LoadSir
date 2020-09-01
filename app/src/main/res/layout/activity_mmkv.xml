@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <Button
+        android:background="#d77213"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MMkvSave"
+        android:text="MMkvSave"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:background="#d77213"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MMkvRead"
+        android:text="MMkvRead"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:background="#d77213"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="MMkvDelete"
+        android:text="MMkvDelete"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:background="#ff7213"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SPSave"
+        android:text="SPSave"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:background="#ff7213"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SPRead"
+        android:text="SPRead"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

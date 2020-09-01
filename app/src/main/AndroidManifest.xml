@@ -37,6 +37,7 @@
         <activity android:name=".target.ConstraintLayoutActivity"/>
         <activity android:name=".calendar.CalendarActivity"/>
         <activity android:name=".week.WeekShowActivity"/>
+        <activity android:name=".mmkv.MMKVActivity"/>
     </application>
 
 </manifest>
