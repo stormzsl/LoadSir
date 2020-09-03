@@ -49,4 +49,16 @@
         android:layout_marginTop="10dp"
         android:textAllCaps="false"/>
 
+
+    <Button
+        android:background="#0000bb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="importSharedPreferences"
+        android:text="importSP"
+        android:textSize="28sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
