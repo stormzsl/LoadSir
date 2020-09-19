@@ -53,6 +53,7 @@ object KVUtils {
 
     fun put(key: String?, value: String?) {
         MMKV.mmkvWithID(USER_INFO).encode(key, value)
+//        MMKV.mmkvWithID(USER_INFO).edit().putString("stormKey", "stormzl").apply();
     }
 
     fun remove(key: String?) {

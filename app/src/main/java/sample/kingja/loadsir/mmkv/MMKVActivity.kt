@@ -24,19 +24,21 @@ class MMKVActivity : Activity() {
     }
 
     fun MMkvSave(view: View?) {
-        val start = System.currentTimeMillis()
-        KVUtils.put(MMKV_LOGIN_NAME_KEY, "stormzsl")
-        Toast.makeText(this, "保存成功", Toast.LENGTH_SHORT).show()
-        val end = System.currentTimeMillis()
-        Log.e("stormzsl MMkvSave cost", (end - start).toString() + " ms")
+//        val start = System.currentTimeMillis()
+//        KVUtils.put(MMKV_LOGIN_NAME_KEY, "stormzsl")
+//        Toast.makeText(this, "保存成功", Toast.LENGTH_SHORT).show()
+//        val end = System.currentTimeMillis()
+//        Log.e("stormzsl MMkvSave cost", (end - start).toString() + " ms")
+        MMKV.mmkvWithID("test").edit().putString("stormkey","hhhhhhh").commit()
     }
 
     fun MMkvRead(view: View?) {
-        val start = System.currentTimeMillis()
-        val value = KVUtils.getString(MMKV_LOGIN_NAME_KEY, "null")
-        Toast.makeText(this, "获取值:$value", Toast.LENGTH_SHORT).show()
-        val end = System.currentTimeMillis()
-        Log.e("stormzsl MMkvRead cost", (end - start).toString() + " ms")
+//        val start = System.currentTimeMillis()
+//        val value = KVUtils.getString(MMKV_LOGIN_NAME_KEY, "null")
+//        Toast.makeText(this, "获取值:$value", Toast.LENGTH_SHORT).show()
+//        val end = System.currentTimeMillis()
+//        Log.e("stormzsl MMkvRead cost", (end - start).toString() + " ms")
+       Log.e("stormzsl",MMKV.mmkvWithID("test").getString("stormkey",null))
     }
 
     fun MMkvDelete(view: View?) {
