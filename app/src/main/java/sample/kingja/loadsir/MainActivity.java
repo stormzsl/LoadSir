@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import sample.kingja.loadsir.calendar.CalendarActivity;
 import sample.kingja.loadsir.mmkv.MMKVActivity;
+import sample.kingja.loadsir.scroll.ScrollSmoothActivity;
 import sample.kingja.loadsir.target.AnimateActivity;
 import sample.kingja.loadsir.target.BestPracticesActivity;
 import sample.kingja.loadsir.target.ConstraintLayoutActivity;
@@ -34,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void smoothScroll(View view){
+        startActivity(new Intent(this, ScrollSmoothActivity.class));
     }
 
     public void inActivity(View view) {

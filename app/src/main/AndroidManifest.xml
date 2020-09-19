@@ -38,6 +38,7 @@
         <activity android:name=".calendar.CalendarActivity"/>
         <activity android:name=".week.WeekShowActivity"/>
         <activity android:name=".mmkv.MMKVActivity"/>
+        <activity android:name=".scroll.ScrollSmoothActivity"/>
     </application>
 
 </manifest>
