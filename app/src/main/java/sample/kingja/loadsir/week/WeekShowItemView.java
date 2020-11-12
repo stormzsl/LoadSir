@@ -2,10 +2,10 @@ package sample.kingja.loadsir.week;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,6 +97,7 @@ public class WeekShowItemView extends LinearLayout implements View.OnClickListen
     public void setSelected(boolean selected){
         if(selected){
             Drawable drawable=getResources().getDrawable(R.mipmap.week_shape_bg);
+            drawable.setColorFilter(getResources().getColor(R.color.main_bg_color), PorterDuff.Mode.SRC_ATOP);
             setBackground(drawable);
         }else {
             setBackground(null);

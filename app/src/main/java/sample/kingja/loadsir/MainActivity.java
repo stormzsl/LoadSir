@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import sample.kingja.loadsir.calendar.CalendarActivity;
 import sample.kingja.loadsir.mmkv.MMKVActivity;
+import sample.kingja.loadsir.rtl.RtlMainActivity;
 import sample.kingja.loadsir.scroll.ScrollSmoothActivity;
 import sample.kingja.loadsir.target.AnimateActivity;
 import sample.kingja.loadsir.target.BestPracticesActivity;
@@ -101,6 +102,11 @@ public class MainActivity extends AppCompatActivity {
     //打开日历
     public void openCalendar(View view){
         Intent intent=new Intent(this, CalendarActivity.class);
+        startActivity(intent);
+    }
+
+    public void rtlClick(View view) {
+        Intent intent=new Intent(this, RtlMainActivity.class);
         startActivity(intent);
     }
 }

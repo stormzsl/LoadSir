@@ -14,6 +14,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="rtlClick"
+            android:text="@string/rtl"
+            android:textAllCaps="false"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="smoothScroll"
             android:text="@string/smooth_scroll"
             android:textAllCaps="false"/>

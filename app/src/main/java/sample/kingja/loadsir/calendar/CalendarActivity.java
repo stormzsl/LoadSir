@@ -51,18 +51,18 @@ public class CalendarActivity extends AppCompatActivity {
 //            e.printStackTrace();
 //        }
 
-        long morningStartTimeMiles =System.currentTimeMillis()+(60*1000);
-            long morningEndStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
+        long morningStartTimeMiles =1600862400*1000L;
+            long morningEndStartTimeMiles=1600887600*1000L;
 
-        long eveningStartTimeMiles =System.currentTimeMillis()+(2*60*1000);
-        long eveningEndStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
+//        long eveningStartTimeMiles =System.currentTimeMillis()+(2*60*1000);
+//        long eveningEndStartTimeMiles=morningStartTimeMiles+(2*60*60*1000);
 //        CalendarProviderManager.startCalendarForIntentToInsert(this,morningStartTimeMiles,endStartTimeMiles,"this is title","this is desc","北京西北旺",false);
 
         CalendarEvent calendarMorningEvent=new CalendarEvent("this is morning title test","this is morning desc test","北京钻石大厦滴滴大厦morningtest",morningStartTimeMiles,morningEndStartTimeMiles,AdvanceTime.ZERO_MINUTES,null);
         CalendarProviderManager.addCalendarEvent(this,calendarMorningEvent);
 
-        CalendarEvent calendarEveningEvent=new CalendarEvent("this is evening title test","this is evening desc test","北京钻石大厦滴滴大厦eveningtest",eveningStartTimeMiles,eveningEndStartTimeMiles,AdvanceTime.ZERO_MINUTES,null);
-        CalendarProviderManager.addCalendarEvent(this,calendarEveningEvent);
+//        CalendarEvent calendarEveningEvent=new CalendarEvent("this is evening title test","this is evening desc test","北京钻石大厦滴滴大厦eveningtest",eveningStartTimeMiles,eveningEndStartTimeMiles,AdvanceTime.ZERO_MINUTES,null);
+//        CalendarProviderManager.addCalendarEvent(this,calendarEveningEvent);
 
 //        Intent intent = new Intent();
 //            intent.setComponent(new ComponentName("com.android.calendar",

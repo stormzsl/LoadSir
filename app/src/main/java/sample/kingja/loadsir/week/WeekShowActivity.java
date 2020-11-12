@@ -27,6 +27,7 @@ public class WeekShowActivity extends AppCompatActivity {
 
     private WeekViewModel weekViewModel;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,5 +68,9 @@ public class WeekShowActivity extends AppCompatActivity {
                 ((WeekShowItemView) child).setSelected(child == acceptItemView);
             }
         }
+    }
+
+    public void changeBgShow(View view){
+
     }
 }
