@@ -9,7 +9,6 @@
     android:layout_marginTop="20dp"
     android:layout_height="wrap_content">
     <Button
-        android:id="@+id/tv_center"
         android:text="left"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="30dp"
@@ -27,7 +26,7 @@
         android:layout_marginStart="20dp" />
 </LinearLayout>
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/arrow"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
@@ -35,7 +34,7 @@
         android:layout_marginStart="10dp" />
     <TextView
         android:layout_marginTop="10dp"
-        android:text="ltr desc"
+        android:text="this is rtl desc"
         android:layout_marginLeft="10dp"
         android:textSize="30sp"
         android:layout_width="wrap_content"
