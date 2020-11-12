@@ -27,7 +27,7 @@
         android:layout_marginStart="20dp" />
 </LinearLayout>
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/arrow"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
