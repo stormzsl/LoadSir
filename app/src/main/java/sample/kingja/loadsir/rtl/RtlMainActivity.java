@@ -1,11 +1,16 @@
 package sample.kingja.loadsir.rtl;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +27,9 @@ import sample.kingja.loadsir.rtl.utils.RtlUtils;
 public class RtlMainActivity extends Activity {
 
     private ListView listView;
+    private ImageView arrowView;
+    private LinearLayout rootView;
+    private Button btLeft;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +42,23 @@ public class RtlMainActivity extends Activity {
 
 
     private void initView(){
+        btLeft=findViewById(R.id.bt_left);
+        rootView=findViewById(R.id.root_view);
         listView=findViewById(R.id.listview);
-
+        arrowView=findViewById(R.id.arrow_iv);
+        arrowView.setImageDrawable(RtlUtils.setAutoMirrored(getApplicationContext(),R.drawable.arrow));
+        rootView.setBackground(RtlUtils.setAutoMirrored(getApplicationContext(),R.drawable.bg_wallet_entry));
+        btLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, 350.0f, 0.0f);//沿着x轴平移
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, -100.0f);//沿着x轴平移
+                AnimatorSet bouncer = new AnimatorSet();//创建一个动画集合类
+                bouncer.play(objectAnimator);//play:先播放animator with:同时播放animator2 after:在某动画后播放 before:再某动画前播放
+                bouncer.setDuration(2000);//持续时间
+                bouncer.start();//开始动画
+            }
+        });
     }
 
     private void bindData() {

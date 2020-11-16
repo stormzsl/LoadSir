@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout
@@ -9,7 +10,7 @@
     android:layout_marginTop="20dp"
     android:layout_height="wrap_content">
     <Button
-        android:id="@+id/tv_center"
+        android:id="@+id/bt_left"
         android:text="left"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="30dp"
@@ -27,6 +28,7 @@
         android:layout_marginStart="20dp" />
 </LinearLayout>
     <ImageView
+        android:id="@+id/arrow_iv"
         android:src="@drawable/arrow"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"

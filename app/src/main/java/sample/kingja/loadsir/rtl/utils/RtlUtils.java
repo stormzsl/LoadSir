@@ -2,6 +2,8 @@ package sample.kingja.loadsir.rtl.utils;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.View;
 
 /**
@@ -27,4 +29,16 @@ public class RtlUtils {
             return false;
         }
     }
+
+    public static Drawable setAutoMirrored(Context context, int resourceId){
+        Drawable drawable = context.getResources().getDrawable(resourceId);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            if (drawable != null) {
+                drawable.setAutoMirrored(true);
+            }
+        }
+        return drawable;
+    }
+
+
 }
