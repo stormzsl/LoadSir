@@ -19,6 +19,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="30dp" />
     <Button
+        android:id="@+id/bt_right"
         android:text="right"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="30dp"

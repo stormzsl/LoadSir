@@ -6,6 +6,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
 
+import androidx.core.text.TextUtilsCompat;
+import androidx.core.view.ViewCompat;
+
 /**
  * 作者:created by storm
  */
@@ -20,6 +23,12 @@ public class RtlUtils {
     private RtlUtils() {
     }
 
+    public boolean isRtl(Context context) {
+        return TextUtilsCompat.getLayoutDirectionFromLocale(context.getResources().getConfiguration().locale) ==ViewCompat.LAYOUT_DIRECTION_RTL;
+    }
+
+
+    //是否使用RTL布局
     public boolean shouldUseLayoutRtl(Context context) {
         final Configuration config = context.getApplicationContext().getResources().getConfiguration();
         if (android.os.Build.VERSION.SDK_INT >=

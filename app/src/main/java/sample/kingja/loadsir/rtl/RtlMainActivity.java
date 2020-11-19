@@ -1,5 +1,6 @@
 package sample.kingja.loadsir.rtl;
 
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -30,6 +31,7 @@ public class RtlMainActivity extends Activity {
     private ImageView arrowView;
     private LinearLayout rootView;
     private Button btLeft;
+    private Button btRight;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,28 +39,72 @@ public class RtlMainActivity extends Activity {
         initView();
         bindData();
         Log.e("stormzsl", "shouldUseLayoutRtl:"+RtlUtils.getInstance().shouldUseLayoutRtl(this));
+        if(RtlUtils.getInstance().isRtl(getApplicationContext())){
+            Log.e("stormzsl","is rtl");
+        }
+
+        if(RtlUtils.getInstance().shouldUseLayoutRtl(getApplicationContext())){
+            Log.e("stormzsl","shouldUseLayoutRtl");
+        }
     }
 
 
 
     private void initView(){
         btLeft=findViewById(R.id.bt_left);
+        btRight=findViewById(R.id.bt_right);
         rootView=findViewById(R.id.root_view);
         listView=findViewById(R.id.listview);
         arrowView=findViewById(R.id.arrow_iv);
         arrowView.setImageDrawable(RtlUtils.setAutoMirrored(getApplicationContext(),R.drawable.arrow));
-        rootView.setBackground(RtlUtils.setAutoMirrored(getApplicationContext(),R.drawable.bg_wallet_entry));
+//        rootView.setBackground(RtlUtils.setAutoMirrored(getApplicationContext(),R.drawable.bg_wallet_entry));
         btLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+               int left=btLeft.getLeft();
+               Log.e("stormzsl","btnLeft start left="+left);
 //                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, 350.0f, 0.0f);//沿着x轴平移
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, -100.0f);//沿着x轴平移
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, 100.0f);//沿着x轴平移
+                AnimatorSet bouncer = new AnimatorSet();//创建一个动画集合类
+                bouncer.play(objectAnimator);//play:先播放animator with:同时播放animator2 after:在某动画后播放 before:再某动画前播放
+                bouncer.setDuration(2000);//持续时间
+                bouncer.start();//开始动画
+                objectAnimator.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        Log.e("stormzsl","btnLeft end left="+btLeft.getLeft());
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+
+                    }
+                });
+            }
+        });
+
+        btRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 100.0f,0.0f);//沿着x轴平移
                 AnimatorSet bouncer = new AnimatorSet();//创建一个动画集合类
                 bouncer.play(objectAnimator);//play:先播放animator with:同时播放animator2 after:在某动画后播放 before:再某动画前播放
                 bouncer.setDuration(2000);//持续时间
                 bouncer.start();//开始动画
             }
         });
+
+
     }
 
     private void bindData() {
