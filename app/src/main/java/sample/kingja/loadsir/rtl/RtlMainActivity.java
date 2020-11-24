@@ -61,10 +61,10 @@ public class RtlMainActivity extends Activity {
         btLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               int left=btLeft.getLeft();
-               Log.e("stormzsl","btnLeft start left="+left);
+               int left=btRight.getLeft();
+               Log.e("stormzsl","btRight start left="+left);
 //                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, 350.0f, 0.0f);//沿着x轴平移
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 0.0f, 100.0f);//沿着x轴平移
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btRight, "translationX", -10, -100.0f);//沿着x轴平移
                 AnimatorSet bouncer = new AnimatorSet();//创建一个动画集合类
                 bouncer.play(objectAnimator);//play:先播放animator with:同时播放animator2 after:在某动画后播放 before:再某动画前播放
                 bouncer.setDuration(2000);//持续时间
@@ -77,7 +77,7 @@ public class RtlMainActivity extends Activity {
 
                     @Override
                     public void onAnimationEnd(Animator animation) {
-                        Log.e("stormzsl","btnLeft end left="+btLeft.getLeft());
+                        Log.e("stormzsl","btRight end left="+btLeft.getLeft());
                     }
 
                     @Override
@@ -96,7 +96,7 @@ public class RtlMainActivity extends Activity {
         btRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btLeft, "translationX", 100.0f,0.0f);//沿着x轴平移
+                ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(btRight, "translationX", -100.0f,0.0f);//沿着x轴平移
                 AnimatorSet bouncer = new AnimatorSet();//创建一个动画集合类
                 bouncer.play(objectAnimator);//play:先播放animator with:同时播放animator2 after:在某动画后播放 before:再某动画前播放
                 bouncer.setDuration(2000);//持续时间
