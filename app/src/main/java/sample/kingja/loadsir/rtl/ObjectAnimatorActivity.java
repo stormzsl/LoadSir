@@ -25,7 +25,7 @@ import sample.kingja.loadsir.rtl.utils.RtlUtils;
  * 作者:created by storm
  */
 
-public class RtlMainActivity extends Activity {
+public class ObjectAnimatorActivity extends Activity {
 
     private ListView listView;
     private ImageView arrowView;
@@ -38,14 +38,6 @@ public class RtlMainActivity extends Activity {
         setContentView(R.layout.activity_rtl_main);
         initView();
         bindData();
-        Log.e("stormzsl", "shouldUseLayoutRtl:"+RtlUtils.getInstance().shouldUseLayoutRtl(this));
-        if(RtlUtils.getInstance().isRtl(getApplicationContext())){
-            Log.e("stormzsl","is rtl");
-        }
-
-        if(RtlUtils.getInstance().shouldUseLayoutRtl(getApplicationContext())){
-            Log.e("stormzsl","shouldUseLayoutRtl");
-        }
     }
 
 
