@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Switch
+        android:id="@+id/sf_monitor_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:checked="true"
+        android:thumb="@drawable/sf_monitor_switch_thumb"
+        android:track="@drawable/sf_monitor_switch_track"
+        style="?attr/borderlessButtonStyle"
+        android:layout_alignParentEnd="true" />
+</LinearLayout>

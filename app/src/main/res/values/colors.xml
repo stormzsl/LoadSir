@@ -8,4 +8,34 @@
     <color name="white">#ffffff</color>
     <color name="red">#bb2c28</color>
     <color name="main_bg_color">#FF7226</color>
+    <color name="sf_transparent">#00000000</color>
+    <color name="sf_transparent_0A">#0000000a</color>
+    <color name="sf_white">#FFFFFF</color>
+    <color name="sf_black">#000000</color>
+    <color name="sf_gray">#666666</color>
+    <color name="sf_black_4">#10000000</color>
+    <color name="sf_black_0B">#0B000000</color>
+    <color name="sf_black_1A">#1A000000</color>
+    <color name="sf_black_10">#20000000</color>
+    <color name="sf_color_eeeeee">#eeeeee</color>
+    <color name="sf_color_999999">#999999</color>
+    <color name="sf_color_979797">#979797</color>
+    <color name="sf_color_333333">#333333</color>
+    <color name="sf_color_f2494f">#f2494f</color>
+    <color name="sf_color_FFF362">#FFF362</color>
+    <color name="sf_color_FD9728">#FD9728</color>
+    <color name="sf_color_666666">#666666</color>
+    <color name="sf_color_FAFAFA">#FAFAFA</color>
+    <color name="sf_color_ff525d">#FF525D</color>
+    <color name="sf_color_BBBBBB">#BBBBBB</color>
+    <color name="sf_color_f1f2f3">#f1f2f3</color>
+    <color name="sf_color_CCCCCC">#CCCCCC</color>
+    <color name="sf_color_FC9153">#FC9153</color>
+    <color name="sf_color_878787">#878787</color>
+    <color name="sf_color_6FFF525D">#6fff525d</color>
+    <color name="sf_color_0A000000">#0A000000</color>
+    <color name="sf_color_theme_FF7733">#FF7733</color>
+    <color name="sf_color_theme_FE7F3F">#FE7F3F</color>
+    <color name="sf_color_FF7F41">#FF7F41</color>
+
 </resources>

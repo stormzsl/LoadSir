@@ -19,9 +19,9 @@ public class RtlActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rtl);
-        mStringPlaceTv = findViewById(R.id.tv_string_place);
-        processStringPlace();
+        setContentView(R.layout.activity_rtl_switch);
+//        mStringPlaceTv = findViewById(R.id.tv_string_place);
+//        processStringPlace();
     }
 
     private void processStringPlace() {
