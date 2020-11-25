@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import sample.kingja.loadsir.calendar.CalendarActivity;
 import sample.kingja.loadsir.mmkv.MMKVActivity;
 import sample.kingja.loadsir.rtl.ObjectAnimatorActivity;
+import sample.kingja.loadsir.rtl.RtlActivity;
 import sample.kingja.loadsir.scroll.ScrollSmoothActivity;
 import sample.kingja.loadsir.target.AnimateActivity;
 import sample.kingja.loadsir.target.BestPracticesActivity;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void rtlClick(View view) {
-        Intent intent=new Intent(this, ObjectAnimatorActivity.class);
+        Intent intent=new Intent(this, RtlActivity.class);
         startActivity(intent);
     }
 }

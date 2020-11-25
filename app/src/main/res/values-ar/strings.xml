@@ -25,5 +25,5 @@
     <string name="test_one">Good Job. You did well</string>
     <string name="test_two">3 hours ago</string>
     <string name="test_three">Select Option:</string>
-    <string name="test_string_place">hello is %s</string>
+    <string name="test_string_place">האם התכוונת ל %s?</string>
 </resources>
