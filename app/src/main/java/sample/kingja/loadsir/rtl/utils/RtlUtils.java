@@ -16,6 +16,8 @@ import androidx.core.view.ViewCompat;
 public class RtlUtils {
     private static final RtlUtils INSTANCE = new RtlUtils();
 
+    private static final float HALF_PIXEL = 0.5f;
+
     public static RtlUtils getInstance() {
         return INSTANCE;
     }
@@ -49,5 +51,9 @@ public class RtlUtils {
         return drawable;
     }
 
+    public static int dip2px(Context context,float dip) {
+        float f =context.getResources().getDisplayMetrics().density;
+        return (int) (dip * f + HALF_PIXEL);
+    }
 
 }
