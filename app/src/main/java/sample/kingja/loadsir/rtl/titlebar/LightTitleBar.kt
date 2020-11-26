@@ -1,5 +1,4 @@
-package com.didichuxing.driver.sdk.widget.titlebar
-
+package sample.kingja.loadsir.rtl.titlebar
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
@@ -9,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.didichuxing.driver.R
+import sample.kingja.loadsir.R
 
 /**
  * 亮色主题的Title Bar

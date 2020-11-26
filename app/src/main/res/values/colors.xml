@@ -37,5 +37,6 @@
     <color name="sf_color_theme_FF7733">#FF7733</color>
     <color name="sf_color_theme_FE7F3F">#FE7F3F</color>
     <color name="sf_color_FF7F41">#FF7F41</color>
-
+    <color name="driver_sdk_title_bar_background_normal">#2C2F38</color>
+    <color name="driver_sdk_title_bar_background_pressed">#40424C</color>
 </resources>

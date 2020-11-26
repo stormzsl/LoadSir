@@ -11,14 +11,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 
-import com.didichuxing.driver.sdk.widget.titlebar.LightTitleBar;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import androidx.fragment.app.FragmentActivity;
 import sample.kingja.loadsir.R;
+import sample.kingja.loadsir.rtl.titlebar.LightTitleBar;
 import sample.kingja.loadsir.rtl.titlebar.TitleBar;
 import sample.kingja.loadsir.rtl.utils.RtlUtils;
 

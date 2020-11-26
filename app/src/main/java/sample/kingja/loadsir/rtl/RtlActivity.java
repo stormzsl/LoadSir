@@ -12,7 +12,7 @@ import sample.kingja.loadsir.R;
  * 作者:created by storm
  */
 
-public class RtlActivity extends AppCompatActivity {
+public class RtlActivity extends BaseRawActivity {
 
     private TextView mStringPlaceTv;
 
@@ -20,6 +20,8 @@ public class RtlActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rtl_switch);
+        mTitleBar.setTitleHasBack("",
+                arg01 -> finish());
 //        mStringPlaceTv = findViewById(R.id.tv_string_place);
 //        processStringPlace();
     }
