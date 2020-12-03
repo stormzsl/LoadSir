@@ -19,7 +19,7 @@ public class RtlActivity extends BaseRawActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rtl_switch);
+        setContentView(R.layout.activity_constraint_rtl);
         mTitleBar.setTitleHasBack("",
                 arg01 -> finish());
 //        mStringPlaceTv = findViewById(R.id.tv_string_place);
