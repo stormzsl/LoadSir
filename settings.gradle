@@ -1,2 +1,3 @@
+include ':standed'
 include ':advanced'
 include ':app', ':loadsir'
