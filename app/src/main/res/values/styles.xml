@@ -36,6 +36,7 @@
 
     <style name="TextViewStyle.TextDirection" parent="android:Widget.TextView">
         <item name="android:textDirection">locale</item>
+        <item name="android:textColor">#bb2c28</item>
     </style>
     <!-- RTL相关结束-->
 </resources>

@@ -1,1 +1,2 @@
+include ':advanced'
 include ':app', ':loadsir'
