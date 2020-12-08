@@ -3,6 +3,6 @@
 
     <application>
         <activity android:name=".AdvanceActivity" />
-        <activity android:name=".HookViewClickActivity" />
+        <activity android:name=".hook.HookViewClickActivity" />
     </application>
 </manifest>
