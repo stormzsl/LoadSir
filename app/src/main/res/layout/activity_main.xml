@@ -11,6 +11,20 @@
         android:orientation="vertical"
         android:padding="12dp"
         tools:context="sample.kingja.loadsir.MainActivity">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="standClick"
+            android:text="@string/standed"
+            android:textAllCaps="false"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="advanceClick"
+            android:text="@string/advanced"
+            android:textAllCaps="false"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

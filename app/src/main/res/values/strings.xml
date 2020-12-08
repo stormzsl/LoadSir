@@ -27,4 +27,6 @@
     <string name="test_three">Select Option:</string>
     <string name="test_string_place">hello is %s</string>
     <string name="driver_sdk_network_error">网络错误</string>
+    <string name="standed">standed</string>
+    <string name="advanced">advanced</string>
 </resources>

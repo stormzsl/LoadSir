@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.didiglobal.android.standed.StandedActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 import sample.kingja.loadsir.calendar.CalendarActivity;
 import sample.kingja.loadsir.mmkv.MMKVActivity;
-import sample.kingja.loadsir.rtl.ObjectAnimatorActivity;
 import sample.kingja.loadsir.rtl.RtlActivity;
 import sample.kingja.loadsir.scroll.ScrollSmoothActivity;
 import sample.kingja.loadsir.target.AnimateActivity;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void smoothScroll(View view){
+    public void smoothScroll(View view) {
         startActivity(new Intent(this, ScrollSmoothActivity.class));
     }
 
@@ -96,18 +97,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //打开mmkv
-    public void openMMKV(View view){
+    public void openMMKV(View view) {
         startActivity(new Intent(this, MMKVActivity.class));
     }
 
     //打开日历
-    public void openCalendar(View view){
-        Intent intent=new Intent(this, CalendarActivity.class);
+    public void openCalendar(View view) {
+        Intent intent = new Intent(this, CalendarActivity.class);
         startActivity(intent);
     }
 
     public void rtlClick(View view) {
-        Intent intent=new Intent(this, RtlActivity.class);
+        Intent intent = new Intent(this, RtlActivity.class);
         startActivity(intent);
+    }
+
+    public void standClick(View view) {
+        Intent intent = new Intent(this, StandedActivity.class);
+        startActivity(intent);
+    }
+
+    public void advanceClick(View view) {
     }
 }
