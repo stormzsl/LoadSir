@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.didiglobal.android.advanced.AdvanceActivity;
 import com.didiglobal.android.standed.StandedActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -118,5 +119,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void advanceClick(View view) {
+        Intent intent = new Intent(this, AdvanceActivity.class);
+        startActivity(intent);
     }
 }
