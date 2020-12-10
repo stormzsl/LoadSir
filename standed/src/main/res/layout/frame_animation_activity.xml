@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/iv_show"
         android:layout_width="300dp"
+        android:background="@drawable/frame_animation"
         android:layout_height="300dp"/>
     <Button
         android:id="@+id/bt_play_frame"
