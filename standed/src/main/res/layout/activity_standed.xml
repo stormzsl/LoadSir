@@ -17,5 +17,33 @@
             android:onClick="launchModeClick"
             android:text="@string/launch_mode"
             android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="tweenAnimationClick"
+            android:text="@string/tween_animation"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="frameAnimationClick"
+            android:text="@string/frame_animation"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="valueAnimationClick"
+            android:text="@string/value_animation"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="objectAnimationClick"
+            android:text="@string/object_animation"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>

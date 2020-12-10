@@ -4,6 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.didiglobal.android.standed.animation.FrameAnimationActivity;
+import com.didiglobal.android.standed.animation.ObjectAnimationActivity;
+import com.didiglobal.android.standed.animation.TweenAnimationActivity;
+import com.didiglobal.android.standed.animation.ValueAnimatorActivity;
+import com.didiglobal.android.standed.launchmode.LaunchModeActivity;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +27,26 @@ public class StandedActivity extends AppCompatActivity {
 
     public void launchModeClick(View view) {
         Intent intent = new Intent(this, LaunchModeActivity.class);
+        startActivity(intent);
+    }
+
+    public void tweenAnimationClick(View view) {
+        Intent intent = new Intent(this, TweenAnimationActivity.class);
+        startActivity(intent);
+    }
+
+    public void frameAnimationClick(View view) {
+        Intent intent = new Intent(this, FrameAnimationActivity.class);
+        startActivity(intent);
+    }
+
+    public void valueAnimationClick(View view) {
+        Intent intent = new Intent(this, ValueAnimatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void objectAnimationClick(View view) {
+        Intent intent = new Intent(this, ObjectAnimationActivity.class);
         startActivity(intent);
     }
 }

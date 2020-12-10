@@ -1,9 +1,12 @@
-package com.didiglobal.android.standed;
+package com.didiglobal.android.standed.launchmode;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.didiglobal.android.standed.R;
+import com.didiglobal.android.standed.StandedActivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

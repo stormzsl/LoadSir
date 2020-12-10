@@ -3,8 +3,12 @@
 
     <application>
         <activity android:name=".StandedActivity"/>
-        <activity android:name=".LaunchModeActivity"
+        <activity android:name=".launchmode.LaunchModeActivity"
             android:taskAffinity="${applicationId}.singleTask"
             android:launchMode="singleTask"/>
+        <activity android:name=".animation.FrameAnimationActivity"/>
+        <activity android:name=".animation.ObjectAnimationActivity"/>
+        <activity android:name=".animation.TweenAnimationActivity"/>
+        <activity android:name=".animation.ValueAnimatorActivity"/>
     </application>
 </manifest>

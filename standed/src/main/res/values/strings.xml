@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="launch_mode">launchMode</string>
+    <string name="tween_animation">tween animation</string>
+    <string name="frame_animation">frame animation</string>
+    <string name="value_animation">value animation</string>
+    <string name="object_animation">object animation</string>
+    <string name="translate_animation">translate animation</string>
+    <string name="scale_animation">scale animation</string>
+    <string name="rotate_animation">rotate animation</string>
+    <string name="alpha_animation">alpha animation</string>
 </resources>
