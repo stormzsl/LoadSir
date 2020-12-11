@@ -9,6 +9,6 @@
         <activity android:name=".animation.FrameAnimationActivity"/>
         <activity android:name=".animation.ObjectAnimationActivity"/>
         <activity android:name=".animation.TweenAnimationActivity"/>
-        <activity android:name=".animation.ValueAnimatorActivity"/>
+        <activity android:name=".animation.valueanimation.ValueAnimatorActivity"/>
     </application>
 </manifest>

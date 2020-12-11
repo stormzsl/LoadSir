@@ -1,4 +1,4 @@
-package com.didiglobal.android.standed.animation;
+package com.didiglobal.android.standed.animation.valueanimation;
 
 import android.animation.ValueAnimator;
 import android.os.Bundle;

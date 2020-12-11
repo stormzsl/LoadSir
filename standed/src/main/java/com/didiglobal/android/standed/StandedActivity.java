@@ -7,7 +7,7 @@ import android.view.View;
 import com.didiglobal.android.standed.animation.FrameAnimationActivity;
 import com.didiglobal.android.standed.animation.ObjectAnimationActivity;
 import com.didiglobal.android.standed.animation.TweenAnimationActivity;
-import com.didiglobal.android.standed.animation.ValueAnimatorActivity;
+import com.didiglobal.android.standed.animation.valueanimation.ValueAnimatorActivity;
 import com.didiglobal.android.standed.launchmode.LaunchModeActivity;
 
 import androidx.annotation.Nullable;
