@@ -109,7 +109,7 @@ public class AnimationCircleView extends View {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     mCurrentPoint= (Point) animation.getAnimatedValue();
-                    invalidate();
+                    invalidate();//只会触发onDraw()方法重绘，不会调用onMeasure,onLayout
                 }
             });
             valueAnimator.setDuration(5000);
