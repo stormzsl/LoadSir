@@ -5,19 +5,33 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <Button
-        android:id="@+id/bt_desc"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="desc objectAnimation"
-        android:textAllCaps="false" />
-
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
     <Button
-        android:id="@+id/bt_control"
+        android:id="@+id/bt_object_animation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="control objectAnimation"
+        android:textAllCaps="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_system_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="system interpolator"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bt_custom_interpolator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="custom interpolator"
         android:textAllCaps="false" />
 
 </LinearLayout>
