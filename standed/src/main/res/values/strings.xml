@@ -9,4 +9,6 @@
     <string name="scale_animation">scale animation</string>
     <string name="rotate_animation">rotate animation</string>
     <string name="alpha_animation">alpha animation</string>
+    <string name="measure_view">measure view</string>
+    <string name="print_width_height">width=%d,height=%d</string>
 </resources>

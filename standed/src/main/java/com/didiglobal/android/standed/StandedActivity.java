@@ -9,6 +9,7 @@ import com.didiglobal.android.standed.animation.ObjectAnimationActivity;
 import com.didiglobal.android.standed.animation.TweenAnimationActivity;
 import com.didiglobal.android.standed.animation.valueanimation.ValueAnimatorActivity;
 import com.didiglobal.android.standed.launchmode.LaunchModeActivity;
+import com.didiglobal.android.standed.view.MeasureViewActivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,6 +48,11 @@ public class StandedActivity extends AppCompatActivity {
 
     public void objectAnimationClick(View view) {
         Intent intent = new Intent(this, ObjectAnimationActivity.class);
+        startActivity(intent);
+    }
+
+    public void MeasureViewClick(View view) {
+        Intent intent = new Intent(this, MeasureViewActivity.class);
         startActivity(intent);
     }
 }

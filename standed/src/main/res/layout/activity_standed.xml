@@ -45,5 +45,12 @@
             android:onClick="objectAnimationClick"
             android:text="@string/object_animation"
             android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="MeasureViewClick"
+            android:text="@string/measure_view"
+            android:textAllCaps="false"/>
     </LinearLayout>
 </ScrollView>
