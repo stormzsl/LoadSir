@@ -1,6 +1,7 @@
 package com.didiglobal.android.standed.view;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +71,14 @@ public class MeasureViewActivity extends AppCompatActivity {
 
         Log.e(TAG + " layout2", String.format(getResources().getString(R.string.print_width_height), layout2.getWidth(), layout2.getHeight()));
 
+        Handler handler=new Handler();
+        //这个任务的执行是放在消息队列中的尾部，等待Looper循环执行到此处取到消息才能继续执行MeasureViewActivity
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.e(TAG,"handler.postDelayed begin excute");
+            }
+        },0);
         Log.e(TAG + " tv1", String.format(getResources().getString(R.string.print_width_height), tv1.getWidth(), tv1.getHeight()));
 
         Log.e(TAG + " tv2", String.format(getResources().getString(R.string.print_width_height), tv2.getWidth(), tv2.getHeight()));
