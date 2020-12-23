@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.didiglobal.android.standed.R;
 
@@ -34,6 +35,19 @@ public class MeasureViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_measure_view);
         initView();
+
+    }
+
+    /*构建Toast时需要looper，当需要在子线程中调用handler时记得要调用 Looper.prepare
+     */
+    private void testToast(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Toast toast=new Toast(MeasureViewActivity.this);
+                Log.e(TAG,"constructor toast need looper ");
+            }
+        }).start();
     }
 
     private void initView() {
