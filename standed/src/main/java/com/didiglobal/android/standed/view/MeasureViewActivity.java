@@ -1,10 +1,13 @@
 package com.didiglobal.android.standed.view;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +38,7 @@ public class MeasureViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_measure_view);
         initView();
-
+        printWindowManagerHashCode();
     }
 
     /*构建Toast时需要looper，当需要在子线程中调用handler时记得要调用 Looper.prepare
@@ -48,6 +51,25 @@ public class MeasureViewActivity extends AppCompatActivity {
                 Log.e(TAG,"constructor toast need looper ");
             }
         }).start();
+    }
+
+    /*
+     *构造Dialog的Context必须为Activity实例，否则会在ViewRootImpl.setView()类中抛出BadTokenException异常
+     */
+    private void testDialog(){
+        TextView textView=new TextView(MeasureViewActivity.this);
+        Dialog dialog=new Dialog(MeasureViewActivity.this.getApplicationContext());
+        dialog.setContentView(textView);
+        dialog.show();
+    }
+
+    /*
+     *调用Context获取WindowManager时生成的是同一个WindowManager
+     * 一个Activity对应一个Window,一个Window对应一个WindowManager,Window调用setWindowManager关联WindowManager
+     */
+    private void printWindowManagerHashCode(){
+        WindowManager windowManager= (WindowManager) MeasureViewActivity.this.getSystemService(Context.WINDOW_SERVICE);
+        Log.e("windowManager111",String.valueOf(windowManager.hashCode()));
     }
 
     private void initView() {

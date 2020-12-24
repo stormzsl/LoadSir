@@ -1,8 +1,11 @@
 package com.didiglobal.android.standed;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.didiglobal.android.standed.animation.FrameAnimationActivity;
 import com.didiglobal.android.standed.animation.ObjectAnimationActivity;
@@ -54,5 +57,11 @@ public class StandedActivity extends AppCompatActivity {
     public void MeasureViewClick(View view) {
         Intent intent = new Intent(this, MeasureViewActivity.class);
         startActivity(intent);
+        printWindowManagerHashCode();
+    }
+
+    private void printWindowManagerHashCode(){
+        WindowManager windowManager= (WindowManager) StandedActivity.this.getSystemService(Context.WINDOW_SERVICE);
+        Log.e("windowManager000",String.valueOf(windowManager.hashCode()));
     }
 }
