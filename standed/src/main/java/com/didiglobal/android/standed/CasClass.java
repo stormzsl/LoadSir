@@ -1,5 +1,8 @@
 package com.didiglobal.android.standed;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
@@ -43,8 +46,19 @@ public class CasClass {
         AtomicInteger integer=new AtomicInteger();
         integer.set(10);
         boolean flag=integer.compareAndSet(10,10);
-        System.out.printf("flag="+flag);
+        System.out.println("flag="+flag);
 
-        AtomicStampedReference atomicStampedReference;
+        HashMap<String,String> srcMap=new HashMap<>();
+        srcMap.put("a","1");
+        srcMap.put("b","2");
+
+        HashMap<String,String> modifyMap=srcMap;
+        modifyMap.put("c","3");
+
+        for (Map.Entry<String, String> e : srcMap.entrySet()) {
+            String key=e.getKey();
+            String value=e.getValue();
+            System.out.println("key = " + key+" value= "+value);
+        }
     }
 }
