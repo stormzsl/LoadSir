@@ -3,6 +3,7 @@ package com.didiglobal.android.standed;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
