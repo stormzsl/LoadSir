@@ -10,6 +10,9 @@
         <activity android:name=".animation.ObjectAnimationActivity"/>
         <activity android:name=".animation.TweenAnimationActivity"/>
         <activity android:name=".animation.valueanimation.ValueAnimatorActivity"/>
-        <activity android:name=".view.MeasureViewActivity"/>
+        <activity android:name=".view.MeasureViewActivity">
+            <intent-filter>
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
