@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 /**
  * 作者:created by storm
+ * 自定义View系列相关必看：https://www.jianshu.com/p/158736a2549d
  */
 
 public class CustomViewGroup extends ViewGroup {
