@@ -17,6 +17,7 @@ public class OuterClass {
 
     static String c;
 
+
     private void testMethod(){
         InnerClass innerClass=new InnerClass();
         innerClass.d=1;
@@ -31,11 +32,11 @@ public class OuterClass {
         innerStaticClass.testMethod4();
         innerStaticClass.m="hh";
 
-        final int[] m = {0};
+        final float m = 1.0f;
         new Thread(new Runnable() {
             @Override
             public void run() {
-                m[0] =10;
+                c="q";
             }
         });
     }

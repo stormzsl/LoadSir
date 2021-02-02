@@ -33,6 +33,10 @@ public class MeasureViewActivity extends AppCompatActivity {
     private TextView tv3;
 
 
+    private CustomViewGroup customViewGroup;
+
+    private View clickTv;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,11 +85,28 @@ public class MeasureViewActivity extends AppCompatActivity {
         layout3 = findViewById(R.id.layout3);
         tv3 = findViewById(R.id.tv3);
 
-        tv3.post(new Runnable() {
+        /*
+         * 这种方式可以获取View的宽高
+         */
+//        tv3.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                Log.e(TAG,">>>>>>>");
+//                printViewSize();
+//            }
+//        });
+
+        customViewGroup=findViewById(R.id.custom_view_group);
+        clickTv=findViewById(R.id.click_tv);
+
+        clickTv.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                Log.e(TAG,">>>>>>>");
-                printViewSize();
+            public void onClick(View v) {
+//                //只会执行onDraw()方法
+//                clickTv.invalidate();
+
+                //执行viewGroup的onMeasure,onLayout
+                clickTv.requestLayout();
             }
         });
     }

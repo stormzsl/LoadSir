@@ -3,7 +3,9 @@ package com.didiglobal.android.standed.view;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
@@ -11,7 +13,9 @@ import androidx.annotation.Nullable;
  * 作者:created by storm
  */
 
-public class CustomView extends View {
+public class CustomView extends androidx.appcompat.widget.AppCompatTextView {
+
+    private static final String TAG=CustomView.class.getSimpleName();
 
 
     public CustomView(Context context) {
@@ -30,6 +34,7 @@ public class CustomView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        Log.e(TAG,"onMeasure");
     }
 
     //绘制子view调用的方法，默认是空实现
@@ -45,5 +50,6 @@ public class CustomView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        Log.e(TAG,"onDraw");
     }
 }

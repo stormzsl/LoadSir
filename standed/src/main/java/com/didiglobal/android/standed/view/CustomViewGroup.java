@@ -1,6 +1,7 @@
 package com.didiglobal.android.standed.view;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,7 @@ public class CustomViewGroup extends ViewGroup {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         //主动调用所有子view测量
 
+        Log.e(TAG,"onMeasure");
         measureChildren(widthMeasureSpec,heightMeasureSpec);
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int width = MeasureSpec.getSize(widthMeasureSpec);
@@ -52,6 +54,7 @@ public class CustomViewGroup extends ViewGroup {
     //详情可参考:https://www.jianshu.com/p/158736a2549d
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        Log.e(TAG,"onLayout");
         for (int index = 0; index < getChildCount(); index++) {
             View child = getChildAt(index);
             int measuredWidth = child.getMeasuredWidth();
@@ -65,5 +68,11 @@ public class CustomViewGroup extends ViewGroup {
             int bottom = measureHeight + top;
             child.layout(left, top, right, bottom);
         }
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        Log.e(TAG,"onDraw");
     }
 }
