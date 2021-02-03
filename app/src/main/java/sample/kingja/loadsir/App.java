@@ -3,6 +3,8 @@ package sample.kingja.loadsir;
 import android.app.Application;
 import android.util.Log;
 
+import com.didiglobal.android.advanced.monitor.BlockMonitorManager;
+import com.didiglobal.android.advanced.monitor.MonitorCore;
 import com.kingja.loadsir.core.LoadSir;
 import com.squareup.leakcanary.LeakCanary;
 import sample.kingja.loadsir.callback.CustomCallback;
@@ -37,6 +39,7 @@ public class App extends Application {
                 .addCallback(new CustomCallback())
                 .setDefaultCallback(LoadingCallback.class)
                 .commit();
+        BlockMonitorManager.getInstance().start();
     }
 
     private boolean setupLeakCanary() {

@@ -26,4 +26,9 @@ public class AdvanceActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void collectMethodStackClick(View view){
+        Intent intent = new Intent(this, CollectMethodStackActivity.class);
+        startActivity(intent);
+    }
+
 }

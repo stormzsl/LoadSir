@@ -4,5 +4,6 @@
     <application>
         <activity android:name=".AdvanceActivity" />
         <activity android:name=".hook.HookViewClickActivity" />
+        <activity android:name=".CollectMethodStackActivity"/>
     </application>
 </manifest>

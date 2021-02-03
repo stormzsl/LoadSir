@@ -2,4 +2,5 @@
 <resources>
     <string name="hook_view_click_activity">HookViewClickActivity</string>
     <string name="hook_bt_click">hook bt click</string>
+    <string name="collect_method_stack">collect method stack</string>
 </resources>
