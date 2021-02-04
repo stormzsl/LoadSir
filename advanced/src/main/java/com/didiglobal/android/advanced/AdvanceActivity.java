@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.didiglobal.android.advanced.hook.HookViewClickActivity;
+import com.didiglobal.android.advanced.monitor.FrameMonitor;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,8 @@ public class AdvanceActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advance);
+        FrameMonitor monitor=new FrameMonitor();
+        monitor.caculateFrame();
     }
 
     public void hookViewClick(View view) {
