@@ -31,6 +31,13 @@ public class AdvanceActivity extends AppCompatActivity {
         rootView=findViewById(R.id.viewroot);
         int maxLevel=calculateViewTreeTotalLevel(rootView);
         Log.e(TAG,"rootview maxLevel is="+maxLevel);
+
+        findViewById(R.id.custom_bt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e(TAG,"onClick width="+v.getMeasuredWidth()+" height="+v.getMeasuredHeight());
+            }
+        });
     }
 
     public void hookViewClick(View view) {

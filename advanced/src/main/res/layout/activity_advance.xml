@@ -24,5 +24,10 @@
             android:layout_marginTop="20dp"
             android:onClick="collectMethodStackClick"
             android:text="@string/collect_method_stack" />
+        <com.didiglobal.android.advanced.view.CustomButton
+            android:text="custom button view"
+            android:id="@+id/custom_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>
