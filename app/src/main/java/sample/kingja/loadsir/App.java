@@ -42,7 +42,7 @@ public class App extends Application {
                 .commit();
         BlockMonitorManager.getInstance().start();
 
-        Thread.setDefaultUncaughtExceptionHandler(new ThreadCatchException());
+        ThreadCatchException.getInstance().init(this);
     }
 
     private boolean setupLeakCanary() {
