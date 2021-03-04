@@ -3,6 +3,7 @@ package sample.kingja.loadsir;
 import android.app.Application;
 import android.util.Log;
 
+import com.didiglobal.android.advanced.exception.ThreadCatchException;
 import com.didiglobal.android.advanced.monitor.BlockMonitorManager;
 import com.didiglobal.android.advanced.monitor.MonitorCore;
 import com.kingja.loadsir.core.LoadSir;
@@ -40,6 +41,8 @@ public class App extends Application {
                 .setDefaultCallback(LoadingCallback.class)
                 .commit();
         BlockMonitorManager.getInstance().start();
+
+        Thread.setDefaultUncaughtExceptionHandler(new ThreadCatchException());
     }
 
     private boolean setupLeakCanary() {

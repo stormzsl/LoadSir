@@ -41,6 +41,14 @@ public class AdvanceActivity extends AppCompatActivity {
                 Log.e("PerformancePrinter","onClick width="+v.getMeasuredWidth()+" height="+v.getMeasuredHeight());
             }
         });
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int [] array=new int[]{};
+                Log.e(TAG,String.valueOf(array[2]));
+            }
+        }).start();
     }
 
     public void hookViewClick(View view) {
