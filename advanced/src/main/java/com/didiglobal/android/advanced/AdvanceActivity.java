@@ -2,12 +2,14 @@ package com.didiglobal.android.advanced;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.didiglobal.android.advanced.hook.HookViewClickActivity;
 import com.didiglobal.android.advanced.monitor.FrameMonitor;
+import com.didiglobal.android.advanced.performance.PerformancePrinter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,10 +34,11 @@ public class AdvanceActivity extends AppCompatActivity {
         int maxLevel=calculateViewTreeTotalLevel(rootView);
         Log.e(TAG,"rootview maxLevel is="+maxLevel);
 
+        Looper.getMainLooper().setMessageLogging(new PerformancePrinter());
         findViewById(R.id.custom_bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e(TAG,"onClick width="+v.getMeasuredWidth()+" height="+v.getMeasuredHeight());
+                Log.e("PerformancePrinter","onClick width="+v.getMeasuredWidth()+" height="+v.getMeasuredHeight());
             }
         });
     }

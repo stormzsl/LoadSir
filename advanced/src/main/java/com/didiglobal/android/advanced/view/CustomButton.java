@@ -29,6 +29,6 @@ public class CustomButton extends androidx.appcompat.widget.AppCompatButton {
      */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        return true;
+        return super.onTouchEvent(event);
     }
 }
