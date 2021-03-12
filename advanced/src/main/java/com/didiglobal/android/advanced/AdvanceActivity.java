@@ -34,7 +34,10 @@ public class AdvanceActivity extends AppCompatActivity {
         int maxLevel=calculateViewTreeTotalLevel(rootView);
         Log.e(TAG,"rootview maxLevel is="+maxLevel);
 
-        Looper.getMainLooper().setMessageLogging(new PerformancePrinter());
+        /*
+         *日志信息输出
+         */
+//        Looper.getMainLooper().setMessageLogging(new PerformancePrinter());
         findViewById(R.id.custom_bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +49,6 @@ public class AdvanceActivity extends AppCompatActivity {
             @Override
             public void run() {
                 int [] array=new int[]{};
-                Log.e(TAG,String.valueOf(array[2]));
             }
         }).start();
     }
